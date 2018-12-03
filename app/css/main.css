@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  padding: 50px;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Lato", sans-serif;
+  background-color: #4b4b4b;
+}
+
+.container__close {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.container__close:hover {
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.container__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.container__item {
+  margin-bottom: 20px;
+}
+
+.container__item:last-child {
+  margin-bottom: 0;
+}
+
+.container__link {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.container__link:hover {
+  color: #b3b3b3;
+}
+
+.container__contact-list {
+  margin-bottom: 20px;
+}
+
+.container__contact-item {
+  color: #ffffff;
+}
+
+.container__social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__social-btn {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.container__social-btn:hover {
+  border-color: #b3b3b3;
+}
+
+.container__social-btn:hover:after {
+  color: #b3b3b3;
+}
+
+.container__social-btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 45%;
+  left: 50%;
+  font-size: 16px;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.container__social-btn--facebook::after {
+  content: "f";
+}
+
+.container__social-btn--twitter::after {
+  content: "t";
+}
+
+.container__social-btn--google::after {
+  content: "g+";
+}

@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    title Menu
+    link(rel="stylesheet" href="css/main.css")
+  body
+    div.container
+      a.container__close(href="#") x
+      ul.container__list
+        - var linkArr = ["home", "about", "work", "services", "team", "contact"]
+        each item in linkArr
+          li.container__item: a.container__link(href="#")= item
+        li.container__item
+          - var user = { login: true }
+          if user.login == true
+            a.container__link(href="#") login
+          else
+            a.container__link(href="#") logout
+      div.container__contact-list
+        p.container__contact-item (912)555-1234
+        p.container__contact-item office@website.com
+      div.container__social
+        a.container__social-btn.container__social-btn--facebook(href="#") facebook
+        a.container__social-btn.container__social-btn--twitter(href="#") twitter
+        a.container__social-btn.container__social-btn--google(href="#") google+
