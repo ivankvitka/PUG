@@ -78,7 +78,8 @@
     &:hover {
       border-color: darken(#ffffff, 30%);
 
-      &:after {
+      &::after {
+        transition: 0s;
         color: darken(#ffffff, 30%);
       }
     }
@@ -92,6 +93,7 @@
       font-size: 16px;
       color: #ffffff;
       transform: translate(-50%, -50%);
+      transition: 0.3s;
     }
 
     &--facebook::after {
